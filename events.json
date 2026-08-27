@@ -1,7 +1,7 @@
 [
   {
     "eventId": "e1",
-    "timestamp": "2024-09-24T15:00:00.000Z",
+    "timestamp": "2024-09-20T09:00:00.000Z",
     "effectiveDate": "2024-10-01",
     "source": "manual",
     "kind": "CompanyFounded",
@@ -11,123 +11,378 @@
   },
   {
     "eventId": "e2",
-    "timestamp": "2024-09-25T15:00:00.000Z",
+    "timestamp": "2024-09-20T10:00:00.000Z",
     "effectiveDate": "2024-10-01",
     "source": "hris",
     "kind": "PersonHired",
     "personId": "p1",
-    "name": "Ingrid",
-    "role": "Forward Deployed Engineer",
+    "name": "Dashiell",
+    "role": "Founding Engineer",
     "employmentType": "full_time"
   },
   {
     "eventId": "e3",
-    "timestamp": "2024-09-26T15:00:00.000Z",
+    "timestamp": "2024-09-20T11:00:00.000Z",
     "effectiveDate": "2024-10-01",
     "source": "hris",
     "kind": "PersonHired",
     "personId": "p2",
-    "name": "Claire",
+    "name": "Zola",
     "role": "Platform Engineer",
-    "employmentType": "contractor"
+    "employmentType": "full_time"
   },
   {
     "eventId": "e4",
-    "timestamp": "2024-10-21T15:00:00.000Z",
-    "effectiveDate": "2024-11-01",
+    "timestamp": "2024-09-20T12:00:00.000Z",
+    "effectiveDate": "2024-10-01",
     "source": "hris",
     "kind": "PersonHired",
     "personId": "p3",
-    "name": "Amara",
+    "name": "Anders",
     "role": "Data Engineer",
     "employmentType": "full_time"
   },
   {
     "eventId": "e5",
-    "timestamp": "2024-10-23T15:00:00.000Z",
-    "effectiveDate": "2024-11-01",
+    "timestamp": "2024-09-20T13:00:00.000Z",
+    "effectiveDate": "2024-10-01",
     "source": "hris",
     "kind": "PersonHired",
     "personId": "p4",
-    "name": "Pavel",
-    "role": "Founding Engineer",
+    "name": "Elena",
+    "role": "Platform Engineer",
     "employmentType": "full_time"
   },
   {
     "eventId": "e6",
-    "timestamp": "2024-12-21T15:00:00.000Z",
-    "effectiveDate": "2025-01-01",
+    "timestamp": "2024-10-20T09:00:00.000Z",
+    "effectiveDate": "2024-11-01",
     "source": "hris",
     "kind": "PersonHired",
     "personId": "p5",
-    "name": "Isaac",
-    "role": "Forward Deployed Engineer",
-    "employmentType": "full_time"
+    "name": "Maya",
+    "role": "Founding Engineer",
+    "employmentType": "contractor"
   },
   {
     "eventId": "e7",
-    "timestamp": "2025-01-23T15:00:00.000Z",
-    "effectiveDate": "2025-02-01",
+    "timestamp": "2024-10-20T10:00:00.000Z",
+    "effectiveDate": "2024-11-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p6",
+    "name": "Anouk",
+    "role": "Data Engineer",
+    "employmentType": "full_time"
+  },
+  {
+    "eventId": "e8",
+    "timestamp": "2024-10-20T11:00:00.000Z",
+    "effectiveDate": "2024-11-01",
     "source": "hris",
     "kind": "TeamFormed",
     "teamId": "t1",
     "name": "Platform"
   },
   {
-    "eventId": "e8",
-    "timestamp": "2025-02-20T15:00:00.000Z",
-    "effectiveDate": "2025-03-01",
+    "eventId": "e9",
+    "timestamp": "2024-11-20T09:00:00.000Z",
+    "effectiveDate": "2024-12-01",
     "source": "hris",
     "kind": "PersonHired",
-    "personId": "p6",
-    "name": "Jonas",
-    "role": "Data Engineer",
+    "personId": "p7",
+    "name": "Rosa",
+    "role": "Forward Deployed Engineer",
     "employmentType": "full_time",
     "teamId": "t1"
   },
   {
-    "eventId": "e9",
-    "timestamp": "2025-02-21T15:00:00.000Z",
-    "effectiveDate": "2025-03-01",
+    "eventId": "e10",
+    "timestamp": "2024-11-20T10:00:00.000Z",
+    "effectiveDate": "2024-12-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p8",
+    "name": "Dagny",
+    "role": "Platform Engineer",
+    "employmentType": "contractor",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e11",
+    "timestamp": "2024-12-20T09:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p9",
+    "name": "Halle",
+    "role": "Platform Engineer",
+    "employmentType": "full_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e12",
+    "timestamp": "2024-12-20T10:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p10",
+    "name": "Caleb",
+    "role": "Forward Deployed Engineer",
+    "employmentType": "full_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e13",
+    "timestamp": "2024-12-20T11:00:00.000Z",
+    "effectiveDate": "2025-01-01",
     "source": "hris",
     "kind": "TeamFormed",
     "teamId": "t2",
     "name": "Design"
   },
   {
-    "eventId": "e10",
-    "timestamp": "2025-02-24T15:00:00.000Z",
+    "eventId": "e14",
+    "timestamp": "2024-12-20T12:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p1",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i1"
+        },
+        "pct": 40,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e15",
+    "timestamp": "2024-12-20T13:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p8",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i2"
+        },
+        "pct": 50,
+        "roleInContext": "technical lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e16",
+    "timestamp": "2024-12-20T14:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p4",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i1"
+        },
+        "pct": 40,
+        "roleInContext": "technical lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e17",
+    "timestamp": "2024-12-20T15:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p9",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i3"
+        },
+        "pct": 20,
+        "roleInContext": "technical lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e18",
+    "timestamp": "2024-12-20T16:00:00.000Z",
+    "effectiveDate": "2025-01-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p10",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i3"
+        },
+        "pct": 20,
+        "roleInContext": "onboarding"
+      }
+    ]
+  },
+  {
+    "eventId": "e19",
+    "timestamp": "2025-02-20T09:00:00.000Z",
     "effectiveDate": "2025-03-01",
     "source": "hris",
     "kind": "PersonHired",
-    "personId": "p7",
-    "name": "Luis",
-    "role": "Platform Engineer",
+    "personId": "p11",
+    "name": "Greta",
+    "role": "Data Engineer",
     "employmentType": "full_time",
-    "teamId": "t2"
+    "teamId": "t1"
   },
   {
-    "eventId": "e11",
-    "timestamp": "2025-04-25T15:00:00.000Z",
-    "effectiveDate": "2025-05-01",
+    "eventId": "e20",
+    "timestamp": "2025-02-20T10:00:00.000Z",
+    "effectiveDate": "2025-03-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p12",
+    "name": "Niall",
+    "role": "Support Engineer",
+    "employmentType": "full_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e21",
+    "timestamp": "2025-03-20T09:00:00.000Z",
+    "effectiveDate": "2025-04-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p13",
+    "name": "Beatriz",
+    "role": "Product Designer",
+    "employmentType": "full_time"
+  },
+  {
+    "eventId": "e22",
+    "timestamp": "2025-03-20T10:00:00.000Z",
+    "effectiveDate": "2025-04-01",
     "source": "project_tool",
     "kind": "CustomerSigned",
     "customerId": "c1",
     "name": "Northwind"
   },
   {
-    "eventId": "e12",
-    "timestamp": "2025-04-20T15:00:00.000Z",
-    "effectiveDate": "2025-05-01",
-    "source": "hris",
-    "kind": "TeamFormed",
-    "teamId": "t3",
-    "name": "Forward Deployed"
+    "eventId": "e23",
+    "timestamp": "2025-03-20T11:00:00.000Z",
+    "effectiveDate": "2025-04-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c2",
+    "name": "Acme Health"
   },
   {
-    "eventId": "e13",
-    "timestamp": "2025-05-20T15:00:00.000Z",
-    "effectiveDate": "2025-06-01",
+    "eventId": "e24",
+    "timestamp": "2025-03-20T12:00:00.000Z",
+    "effectiveDate": "2025-04-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p12",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c2"
+        },
+        "pct": 20,
+        "roleInContext": "onboarding"
+      }
+    ]
+  },
+  {
+    "eventId": "e25",
+    "timestamp": "2025-03-20T13:00:00.000Z",
+    "effectiveDate": "2025-04-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p6",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c1"
+        },
+        "pct": 50,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e26",
+    "timestamp": "2025-03-20T14:00:00.000Z",
+    "effectiveDate": "2025-04-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p1",
+    "fromTeamId": null,
+    "toTeamId": "t1"
+  },
+  {
+    "eventId": "e27",
+    "timestamp": "2025-03-20T15:00:00.000Z",
+    "effectiveDate": "2025-04-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p3",
+    "fromTeamId": null,
+    "toTeamId": "t2"
+  },
+  {
+    "eventId": "e28",
+    "timestamp": "2025-04-20T09:00:00.000Z",
+    "effectiveDate": "2025-05-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p14",
+    "name": "Viggo",
+    "role": "Founding Engineer",
+    "employmentType": "full_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e29",
+    "timestamp": "2025-04-20T10:00:00.000Z",
+    "effectiveDate": "2025-05-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c3",
+    "name": "Meridian Bank"
+  },
+  {
+    "eventId": "e30",
+    "timestamp": "2025-04-20T11:00:00.000Z",
+    "effectiveDate": "2025-05-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c4",
+    "name": "Voltaic"
+  },
+  {
+    "eventId": "e31",
+    "timestamp": "2025-04-20T12:00:00.000Z",
+    "effectiveDate": "2025-05-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c5",
+    "name": "Redwood Logistics"
+  },
+  {
+    "eventId": "e32",
+    "timestamp": "2025-04-20T13:00:00.000Z",
+    "effectiveDate": "2025-05-01",
     "source": "project_tool",
     "kind": "AllocationChanged",
     "personId": "p7",
@@ -135,7 +390,493 @@
       {
         "target": {
           "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 10,
+        "roleInContext": "FDE support"
+      }
+    ]
+  },
+  {
+    "eventId": "e33",
+    "timestamp": "2025-04-20T14:00:00.000Z",
+    "effectiveDate": "2025-05-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p5",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 30,
+        "roleInContext": "technical lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e34",
+    "timestamp": "2025-04-20T15:00:00.000Z",
+    "effectiveDate": "2025-05-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p3",
+    "fromTeamId": "t2",
+    "toTeamId": "t1"
+  },
+  {
+    "eventId": "e35",
+    "timestamp": "2025-05-20T09:00:00.000Z",
+    "effectiveDate": "2025-06-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p13",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i4"
+        },
+        "pct": 30,
+        "roleInContext": "design partner"
+      }
+    ]
+  },
+  {
+    "eventId": "e36",
+    "timestamp": "2025-05-20T10:00:00.000Z",
+    "effectiveDate": "2025-06-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p6",
+    "fromTeamId": null,
+    "toTeamId": "t1"
+  },
+  {
+    "eventId": "e37",
+    "timestamp": "2025-06-20T09:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p15",
+    "name": "Fenna",
+    "role": "Forward Deployed Engineer",
+    "employmentType": "full_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e38",
+    "timestamp": "2025-06-20T10:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p16",
+    "name": "Saoirse",
+    "role": "Account Executive",
+    "employmentType": "part_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e39",
+    "timestamp": "2025-06-20T11:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "hris",
+    "kind": "TeamFormed",
+    "teamId": "t3",
+    "name": "Forward Deployed"
+  },
+  {
+    "eventId": "e40",
+    "timestamp": "2025-06-20T12:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p16",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e41",
+    "timestamp": "2025-06-20T13:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p15",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c4"
+        },
+        "pct": 30,
+        "roleInContext": "FDE support"
+      }
+    ]
+  },
+  {
+    "eventId": "e42",
+    "timestamp": "2025-06-20T14:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p14",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c5"
+        },
+        "pct": 40,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e43",
+    "timestamp": "2025-06-20T15:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p10",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i3"
+        },
+        "pct": 20,
+        "roleInContext": "onboarding"
+      },
+      {
+        "target": {
+          "kind": "customer",
           "id": "c1"
+        },
+        "pct": 40,
+        "roleInContext": "FDE support"
+      }
+    ]
+  },
+  {
+    "eventId": "e44",
+    "timestamp": "2025-06-20T16:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p16",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c5"
+        },
+        "pct": 50,
+        "roleInContext": "account lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e45",
+    "timestamp": "2025-06-21T09:00:00.000Z",
+    "effectiveDate": "2025-07-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p16",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c5"
+        },
+        "pct": 50,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c1"
+        },
+        "pct": 20,
+        "roleInContext": "account lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e46",
+    "timestamp": "2025-07-20T09:00:00.000Z",
+    "effectiveDate": "2025-08-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p17",
+    "name": "Theo",
+    "role": "Product Designer",
+    "employmentType": "full_time"
+  },
+  {
+    "eventId": "e47",
+    "timestamp": "2025-07-20T10:00:00.000Z",
+    "effectiveDate": "2025-08-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p3",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 10,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e48",
+    "timestamp": "2025-07-20T11:00:00.000Z",
+    "effectiveDate": "2025-08-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p2",
+    "fromTeamId": null,
+    "toTeamId": "t1"
+  },
+  {
+    "eventId": "e49",
+    "timestamp": "2025-07-20T12:00:00.000Z",
+    "effectiveDate": "2025-08-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p5",
+    "fromTeamId": null,
+    "toTeamId": "t3"
+  },
+  {
+    "eventId": "e50",
+    "timestamp": "2025-08-20T09:00:00.000Z",
+    "effectiveDate": "2025-09-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p18",
+    "name": "Priya",
+    "role": "Forward Deployed Engineer",
+    "employmentType": "full_time",
+    "teamId": "t2"
+  },
+  {
+    "eventId": "e51",
+    "timestamp": "2025-08-20T10:00:00.000Z",
+    "effectiveDate": "2025-09-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p19",
+    "name": "Goran",
+    "role": "Data Engineer",
+    "employmentType": "full_time",
+    "teamId": "t3"
+  },
+  {
+    "eventId": "e52",
+    "timestamp": "2025-08-20T11:00:00.000Z",
+    "effectiveDate": "2025-09-01",
+    "source": "hris",
+    "kind": "RoleChanged",
+    "personId": "p3",
+    "from": "Data Engineer",
+    "to": "Senior Data Engineer"
+  },
+  {
+    "eventId": "e53",
+    "timestamp": "2025-09-20T09:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p20",
+    "name": "Cyrus",
+    "role": "Founding Engineer",
+    "employmentType": "full_time",
+    "teamId": "t1"
+  },
+  {
+    "eventId": "e54",
+    "timestamp": "2025-09-20T10:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "hris",
+    "kind": "TeamFormed",
+    "teamId": "t4",
+    "name": "Data"
+  },
+  {
+    "eventId": "e55",
+    "timestamp": "2025-09-20T11:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c6",
+    "name": "Pinecrest Retail"
+  },
+  {
+    "eventId": "e56",
+    "timestamp": "2025-09-20T12:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c7",
+    "name": "Halcyon Insurance"
+  },
+  {
+    "eventId": "e57",
+    "timestamp": "2025-09-20T13:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p18",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c7"
+        },
+        "pct": 20,
+        "roleInContext": "FDE support"
+      }
+    ]
+  },
+  {
+    "eventId": "e58",
+    "timestamp": "2025-09-20T14:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p11",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c7"
+        },
+        "pct": 10,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e59",
+    "timestamp": "2025-09-20T15:00:00.000Z",
+    "effectiveDate": "2025-10-01",
+    "source": "hris",
+    "kind": "RoleChanged",
+    "personId": "p10",
+    "from": "Forward Deployed Engineer",
+    "to": "Lead Forward Deployed Engineer"
+  },
+  {
+    "eventId": "e60",
+    "timestamp": "2025-10-20T09:00:00.000Z",
+    "effectiveDate": "2025-11-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p21",
+    "name": "Ulla",
+    "role": "Account Executive",
+    "employmentType": "contractor"
+  },
+  {
+    "eventId": "e61",
+    "timestamp": "2025-10-20T10:00:00.000Z",
+    "effectiveDate": "2025-11-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p21",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c6"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e62",
+    "timestamp": "2025-10-20T11:00:00.000Z",
+    "effectiveDate": "2025-11-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p21",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c6"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c2"
+        },
+        "pct": 10,
+        "roleInContext": "account lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e63",
+    "timestamp": "2025-10-20T12:00:00.000Z",
+    "effectiveDate": "2025-11-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p21",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c6"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c2"
+        },
+        "pct": 10,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c7"
         },
         "pct": 25,
         "roleInContext": "account lead"
@@ -143,54 +884,282 @@
     ]
   },
   {
-    "eventId": "e14",
-    "timestamp": "2025-05-20T15:00:00.000Z",
-    "effectiveDate": "2025-06-01",
+    "eventId": "e64",
+    "timestamp": "2025-10-20T13:00:00.000Z",
+    "effectiveDate": "2025-11-01",
     "source": "hris",
-    "kind": "TeamFormed",
-    "teamId": "t4",
-    "name": "Data"
+    "kind": "RoleChanged",
+    "personId": "p14",
+    "from": "Founding Engineer",
+    "to": "Head of Engineering"
   },
   {
-    "eventId": "e15",
-    "timestamp": "2025-05-22T15:00:00.000Z",
-    "effectiveDate": "2025-06-01",
+    "eventId": "e65",
+    "timestamp": "2025-10-20T14:00:00.000Z",
+    "effectiveDate": "2025-11-01",
     "source": "hris",
-    "kind": "PersonTransferred",
-    "personId": "p7",
-    "fromTeamId": "t2",
-    "toTeamId": "t4"
+    "kind": "RoleChanged",
+    "personId": "p20",
+    "from": "Founding Engineer",
+    "to": "Head of Engineering"
   },
   {
-    "eventId": "e16",
-    "timestamp": "2025-06-26T15:00:00.000Z",
-    "effectiveDate": "2025-07-01",
-    "source": "project_tool",
-    "kind": "CustomerSigned",
-    "customerId": "c2",
-    "name": "Acme Health"
-  },
-  {
-    "eventId": "e17",
-    "timestamp": "2025-07-24T15:00:00.000Z",
-    "effectiveDate": "2025-08-01",
+    "eventId": "e66",
+    "timestamp": "2025-11-20T09:00:00.000Z",
+    "effectiveDate": "2025-12-01",
     "source": "hris",
     "kind": "PersonDeparted",
-    "personId": "p7",
-    "reason": "voluntary"
+    "personId": "p12",
+    "reason": "involuntary"
   },
   {
-    "eventId": "e18",
-    "timestamp": "2025-07-24T15:00:00.000Z",
-    "effectiveDate": "2025-08-01",
+    "eventId": "e67",
+    "timestamp": "2025-11-20T10:00:00.000Z",
+    "effectiveDate": "2025-12-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p22",
+    "name": "Ingrid",
+    "role": "Founding Engineer",
+    "employmentType": "full_time"
+  },
+  {
+    "eventId": "e68",
+    "timestamp": "2025-11-20T11:00:00.000Z",
+    "effectiveDate": "2025-12-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p23",
+    "name": "Rafael",
+    "role": "Forward Deployed Engineer",
+    "employmentType": "contractor",
+    "teamId": "t4"
+  },
+  {
+    "eventId": "e69",
+    "timestamp": "2025-11-20T12:00:00.000Z",
+    "effectiveDate": "2025-12-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p24",
+    "name": "Nora",
+    "role": "Support Engineer",
+    "employmentType": "full_time"
+  },
+  {
+    "eventId": "e70",
+    "timestamp": "2025-11-20T13:00:00.000Z",
+    "effectiveDate": "2025-12-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p25",
+    "name": "Sofia",
+    "role": "Founding Engineer",
+    "employmentType": "full_time",
+    "teamId": "t3"
+  },
+  {
+    "eventId": "e71",
+    "timestamp": "2025-11-20T14:00:00.000Z",
+    "effectiveDate": "2025-12-01",
     "source": "project_tool",
     "kind": "AllocationChanged",
-    "personId": "p3",
+    "personId": "p24",
     "assignments": [
       {
         "target": {
           "kind": "customer",
-          "id": "c1"
+          "id": "c6"
+        },
+        "pct": 10,
+        "roleInContext": "onboarding"
+      }
+    ]
+  },
+  {
+    "eventId": "e72",
+    "timestamp": "2025-11-20T15:00:00.000Z",
+    "effectiveDate": "2025-12-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p23",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c2"
+        },
+        "pct": 20,
+        "roleInContext": "onboarding"
+      }
+    ]
+  },
+  {
+    "eventId": "e73",
+    "timestamp": "2025-11-20T16:00:00.000Z",
+    "effectiveDate": "2025-12-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p10",
+    "fromTeamId": "t1",
+    "toTeamId": "t4"
+  },
+  {
+    "eventId": "e74",
+    "timestamp": "2026-01-20T09:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "hris",
+    "kind": "PersonDeparted",
+    "personId": "p3",
+    "reason": "voluntary"
+  },
+  {
+    "eventId": "e75",
+    "timestamp": "2026-01-20T10:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p11",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c7"
+        },
+        "pct": 10,
+        "roleInContext": "data integration"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 10,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e76",
+    "timestamp": "2026-01-20T11:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "hris",
+    "kind": "PersonHired",
+    "personId": "p26",
+    "name": "Emeka",
+    "role": "Product Designer",
+    "employmentType": "full_time"
+  },
+  {
+    "eventId": "e77",
+    "timestamp": "2026-01-20T12:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c8",
+    "name": "Barrow Manufacturing"
+  },
+  {
+    "eventId": "e78",
+    "timestamp": "2026-01-20T13:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "project_tool",
+    "kind": "CustomerSigned",
+    "customerId": "c9",
+    "name": "Kestrel Energy"
+  },
+  {
+    "eventId": "e79",
+    "timestamp": "2026-01-20T14:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p24",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c6"
+        },
+        "pct": 10,
+        "roleInContext": "onboarding"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c8"
+        },
+        "pct": 30,
+        "roleInContext": "onboarding"
+      }
+    ]
+  },
+  {
+    "eventId": "e80",
+    "timestamp": "2026-01-20T15:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "hris",
+    "kind": "RoleChanged",
+    "personId": "p18",
+    "from": "Forward Deployed Engineer",
+    "to": "Lead Forward Deployed Engineer"
+  },
+  {
+    "eventId": "e81",
+    "timestamp": "2026-01-20T16:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p26",
+    "fromTeamId": null,
+    "toTeamId": "t1"
+  },
+  {
+    "eventId": "e82",
+    "timestamp": "2026-01-21T09:00:00.000Z",
+    "effectiveDate": "2026-02-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p25",
+    "fromTeamId": "t3",
+    "toTeamId": "t1"
+  },
+  {
+    "eventId": "e83",
+    "timestamp": "2026-02-20T09:00:00.000Z",
+    "effectiveDate": "2026-03-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p21",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c6"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c2"
+        },
+        "pct": 10,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c7"
+        },
+        "pct": 25,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c8"
         },
         "pct": 20,
         "roleInContext": "account lead"
@@ -198,240 +1167,146 @@
     ]
   },
   {
-    "eventId": "e19",
-    "timestamp": "2025-08-24T15:00:00.000Z",
-    "effectiveDate": "2025-09-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p3",
-    "assignments": [
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i2"
-        },
-        "pct": 20
-      },
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i3"
-        },
-        "pct": 10
-      },
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i1"
-        },
-        "pct": 40
-      }
-    ]
-  },
-  {
-    "eventId": "e20",
-    "timestamp": "2025-08-21T15:00:00.000Z",
-    "effectiveDate": "2025-09-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p5",
-    "assignments": [
-      {
-        "target": {
-          "kind": "customer",
-          "id": "c1"
-        },
-        "pct": 45
-      },
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i1"
-        },
-        "pct": 18
-      },
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i3"
-        },
-        "pct": 36
-      }
-    ]
-  },
-  {
-    "eventId": "e21",
-    "timestamp": "2025-09-27T15:00:00.000Z",
-    "effectiveDate": "2025-10-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p1",
-    "assignments": [
-      {
-        "target": {
-          "kind": "customer",
-          "id": "c2"
-        },
-        "pct": 20,
-        "roleInContext": "FDE support"
-      },
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i2"
-        },
-        "pct": 40
-      }
-    ]
-  },
-  {
-    "eventId": "e22",
-    "timestamp": "2025-10-27T15:00:00.000Z",
-    "effectiveDate": "2025-11-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p1",
-    "assignments": [
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i2"
-        },
-        "pct": 20
-      },
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i3"
-        },
-        "pct": 30
-      }
-    ]
-  },
-  {
-    "eventId": "e23",
-    "timestamp": "2025-10-25T15:00:00.000Z",
-    "effectiveDate": "2025-11-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p2",
-    "assignments": [
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i2"
-        },
-        "pct": 20
-      }
-    ]
-  },
-  {
-    "eventId": "e24",
-    "timestamp": "2025-10-27T15:00:00.000Z",
-    "effectiveDate": "2025-11-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p3",
-    "assignments": [
-      {
-        "target": {
-          "kind": "customer",
-          "id": "c2"
-        },
-        "pct": 30
-      }
-    ]
-  },
-  {
-    "eventId": "e25",
-    "timestamp": "2025-11-23T15:00:00.000Z",
-    "effectiveDate": "2025-12-01",
-    "source": "hris",
-    "kind": "PersonHired",
-    "personId": "p8",
-    "name": "Yuki",
-    "role": "Product Designer",
-    "employmentType": "full_time",
-    "teamId": "t2"
-  },
-  {
-    "eventId": "e26",
-    "timestamp": "2025-12-24T15:00:00.000Z",
-    "effectiveDate": "2026-01-01",
-    "source": "project_tool",
-    "kind": "AllocationChanged",
-    "personId": "p8",
-    "assignments": [
-      {
-        "target": {
-          "kind": "internal",
-          "id": "i1"
-        },
-        "pct": 30
-      }
-    ]
-  },
-  {
-    "eventId": "e27",
-    "timestamp": "2026-01-22T15:00:00.000Z",
-    "effectiveDate": "2026-02-01",
-    "source": "hris",
-    "kind": "PersonHired",
-    "personId": "p9",
-    "name": "Hana",
-    "role": "Platform Engineer",
-    "employmentType": "full_time",
-    "teamId": "t2"
-  },
-  {
-    "eventId": "e28",
-    "timestamp": "2026-01-22T15:00:00.000Z",
-    "effectiveDate": "2026-02-01",
-    "source": "project_tool",
-    "kind": "CustomerSigned",
-    "customerId": "c3",
-    "name": "Meridian Bank"
-  },
-  {
-    "eventId": "e29",
-    "timestamp": "2026-02-23T15:00:00.000Z",
+    "eventId": "e84",
+    "timestamp": "2026-02-20T10:00:00.000Z",
     "effectiveDate": "2026-03-01",
     "source": "project_tool",
     "kind": "AllocationChanged",
-    "personId": "p1",
+    "personId": "p17",
     "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c8"
+        },
+        "pct": 40,
+        "roleInContext": "design partner"
+      }
+    ]
+  },
+  {
+    "eventId": "e85",
+    "timestamp": "2026-02-20T11:00:00.000Z",
+    "effectiveDate": "2026-03-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p21",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c6"
+        },
+        "pct": 30,
+        "roleInContext": "account lead"
+      },
       {
         "target": {
           "kind": "customer",
           "id": "c2"
         },
-        "pct": 40
+        "pct": 10,
+        "roleInContext": "account lead"
       },
       {
         "target": {
           "kind": "customer",
-          "id": "c3"
+          "id": "c7"
         },
-        "pct": 50,
-        "roleInContext": "FDE support"
+        "pct": 25,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c8"
+        },
+        "pct": 20,
+        "roleInContext": "account lead"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c9"
+        },
+        "pct": 15,
+        "roleInContext": "account lead"
       }
     ]
   },
   {
-    "eventId": "e30",
-    "timestamp": "2026-03-27T15:00:00.000Z",
+    "eventId": "e86",
+    "timestamp": "2026-02-20T12:00:00.000Z",
+    "effectiveDate": "2026-03-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p10",
+    "fromTeamId": "t4",
+    "toTeamId": "t2"
+  },
+  {
+    "eventId": "e87",
+    "timestamp": "2026-03-20T09:00:00.000Z",
+    "effectiveDate": "2026-04-01",
+    "source": "hris",
+    "kind": "PersonDeparted",
+    "personId": "p22",
+    "reason": "involuntary"
+  },
+  {
+    "eventId": "e88",
+    "timestamp": "2026-03-20T10:00:00.000Z",
     "effectiveDate": "2026-04-01",
     "source": "hris",
     "kind": "PersonHired",
-    "personId": "p10",
-    "name": "Elena",
-    "role": "Platform Engineer",
-    "employmentType": "full_time"
+    "personId": "p27",
+    "name": "Hugo",
+    "role": "Account Executive",
+    "employmentType": "full_time",
+    "teamId": "t4"
   },
   {
-    "eventId": "e31",
-    "timestamp": "2026-03-23T15:00:00.000Z",
+    "eventId": "e89",
+    "timestamp": "2026-03-20T11:00:00.000Z",
     "effectiveDate": "2026-04-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p19",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c9"
+        },
+        "pct": 25,
+        "roleInContext": "data integration"
+      }
+    ]
+  },
+  {
+    "eventId": "e90",
+    "timestamp": "2026-03-20T12:00:00.000Z",
+    "effectiveDate": "2026-04-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p7",
+    "fromTeamId": "t1",
+    "toTeamId": "t3"
+  },
+  {
+    "eventId": "e91",
+    "timestamp": "2026-03-20T13:00:00.000Z",
+    "effectiveDate": "2026-04-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p14",
+    "fromTeamId": "t1",
+    "toTeamId": "t3"
+  },
+  {
+    "eventId": "e92",
+    "timestamp": "2026-04-20T09:00:00.000Z",
+    "effectiveDate": "2026-05-01",
     "source": "hris",
     "kind": "RoleChanged",
     "personId": "p2",
@@ -439,57 +1314,181 @@
     "to": "Senior Platform Engineer"
   },
   {
-    "eventId": "e32",
-    "timestamp": "2026-03-23T15:00:00.000Z",
-    "effectiveDate": "2026-04-01",
+    "eventId": "e93",
+    "timestamp": "2026-04-20T10:00:00.000Z",
+    "effectiveDate": "2026-05-01",
     "source": "hris",
-    "kind": "PersonHired",
-    "personId": "p11",
-    "name": "Theo",
-    "role": "Account Executive",
-    "employmentType": "full_time"
+    "kind": "PersonTransferred",
+    "personId": "p6",
+    "fromTeamId": "t1",
+    "toTeamId": "t4"
   },
   {
-    "eventId": "e33",
-    "timestamp": "2026-06-27T15:00:00.000Z",
-    "effectiveDate": "2026-07-01",
+    "eventId": "e94",
+    "timestamp": "2026-05-20T09:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "hris",
+    "kind": "PersonDeparted",
+    "personId": "p5",
+    "reason": "voluntary"
+  },
+  {
+    "eventId": "e95",
+    "timestamp": "2026-05-20T10:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "hris",
+    "kind": "PersonDeparted",
+    "personId": "p9",
+    "reason": "involuntary"
+  },
+  {
+    "eventId": "e96",
+    "timestamp": "2026-05-20T11:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "hris",
+    "kind": "PersonDeparted",
+    "personId": "p26",
+    "reason": "involuntary"
+  },
+  {
+    "eventId": "e97",
+    "timestamp": "2026-05-20T12:00:00.000Z",
+    "effectiveDate": "2026-06-01",
     "source": "hris",
     "kind": "PersonHired",
-    "personId": "p12",
-    "name": "Nora",
-    "role": "Data Engineer",
-    "employmentType": "contractor",
+    "personId": "p28",
+    "name": "Ravi",
+    "role": "Platform Engineer",
+    "employmentType": "full_time",
     "teamId": "t4"
   },
   {
-    "eventId": "e34",
-    "timestamp": "2026-07-27T15:00:00.000Z",
-    "effectiveDate": "2026-08-01",
-    "source": "hris",
-    "kind": "PersonHired",
-    "personId": "p13",
-    "name": "Dimitri",
-    "role": "Product Designer",
-    "employmentType": "contractor",
-    "teamId": "t2"
+    "eventId": "e98",
+    "timestamp": "2026-05-20T13:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p2",
+    "assignments": [
+      {
+        "target": {
+          "kind": "internal",
+          "id": "i3"
+        },
+        "pct": 30,
+        "roleInContext": "technical lead"
+      }
+    ]
   },
   {
-    "eventId": "e35",
-    "timestamp": "2026-07-22T15:00:00.000Z",
+    "eventId": "e99",
+    "timestamp": "2026-05-20T14:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p20",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c3"
+        },
+        "pct": 20,
+        "roleInContext": "technical lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e100",
+    "timestamp": "2026-05-20T15:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "hris",
+    "kind": "RoleChanged",
+    "personId": "p6",
+    "from": "Data Engineer",
+    "to": "Senior Data Engineer"
+  },
+  {
+    "eventId": "e101",
+    "timestamp": "2026-05-20T16:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "hris",
+    "kind": "RoleChanged",
+    "personId": "p1",
+    "from": "Founding Engineer",
+    "to": "Head of Engineering"
+  },
+  {
+    "eventId": "e102",
+    "timestamp": "2026-05-21T09:00:00.000Z",
+    "effectiveDate": "2026-06-01",
+    "source": "hris",
+    "kind": "PersonTransferred",
+    "personId": "p27",
+    "fromTeamId": "t4",
+    "toTeamId": "t2"
+  },
+  {
+    "eventId": "e103",
+    "timestamp": "2026-07-20T09:00:00.000Z",
     "effectiveDate": "2026-08-01",
     "source": "project_tool",
     "kind": "CustomerSigned",
-    "customerId": "c4",
-    "name": "Voltaic"
+    "customerId": "c10",
+    "name": "Alderman Legal"
   },
   {
-    "eventId": "e36",
-    "timestamp": "2026-07-22T15:00:00.000Z",
+    "eventId": "e104",
+    "timestamp": "2026-07-20T10:00:00.000Z",
     "effectiveDate": "2026-08-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p18",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c7"
+        },
+        "pct": 20,
+        "roleInContext": "FDE support"
+      },
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c10"
+        },
+        "pct": 25,
+        "roleInContext": "onboarding"
+      }
+    ]
+  },
+  {
+    "eventId": "e105",
+    "timestamp": "2026-07-20T11:00:00.000Z",
+    "effectiveDate": "2026-08-01",
+    "source": "project_tool",
+    "kind": "AllocationChanged",
+    "personId": "p27",
+    "assignments": [
+      {
+        "target": {
+          "kind": "customer",
+          "id": "c10"
+        },
+        "pct": 25,
+        "roleInContext": "account lead"
+      }
+    ]
+  },
+  {
+    "eventId": "e106",
+    "timestamp": "2026-08-20T09:00:00.000Z",
+    "effectiveDate": "2026-09-01",
     "source": "hris",
     "kind": "PersonTransferred",
-    "personId": "p2",
+    "personId": "p17",
     "fromTeamId": null,
-    "toTeamId": "t1"
+    "toTeamId": "t4"
   }
 ]

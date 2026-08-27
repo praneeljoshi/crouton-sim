@@ -1,24 +1,51 @@
 import { writeFileSync } from "node:fs";
 import { applyEvent, emptyState } from "./apply";
-import { INTERNAL_EFFORTS, generate } from "./generate";
+import { generate } from "./generate";
+import { DEFAULT_MODEL, needsOf, workNameOf } from "./model";
+import { DEFAULT_SCENARIO, SCENARIOS, scaleScenario } from "./scenario";
+import type { Scenario } from "./scenario";
+import { check } from "./check";
 import type { Event, State, Target } from "./types";
+
+/** One model, used for both generation and rendering — a single source of names. */
+const model = DEFAULT_MODEL;
 
 // --- Flag parsing: by hand, no library ---
 
-type Options = { seed: number; months: number; json: boolean; snapshot: string | null };
+type Options = {
+  seed: number;
+  months: number;
+  json: boolean;
+  snapshot: string | null;
+  scenario: Scenario;
+  growth: number;
+  churn: number;
+};
 
 function parseArgs(argv: string[]): Options {
-  const options: Options = { seed: 42, months: 24, json: false, snapshot: null };
+  const options: Options = {
+    seed: 42,
+    months: 24,
+    json: false,
+    snapshot: null,
+    scenario: DEFAULT_SCENARIO,
+    growth: 1,
+    churn: 1,
+  };
   for (let i = 0; i < argv.length; i++) {
     const flag = argv[i];
     const value = argv[i + 1];
     switch (flag) {
       case "--seed":
-      case "--months": {
+      case "--months":
+      case "--growth":
+      case "--churn": {
         const n = Number(value);
         if (value === undefined || !Number.isFinite(n)) die(`${flag} needs a number`);
         if (flag === "--seed") options.seed = n;
-        else options.months = n;
+        else if (flag === "--months") options.months = n;
+        else if (flag === "--growth") options.growth = n;
+        else options.churn = n;
         i++;
         break;
       }
@@ -30,6 +57,15 @@ function parseArgs(argv: string[]): Options {
         options.snapshot = value!;
         i++;
         break;
+      case "--preset": {
+        const scenario = value === undefined ? undefined : SCENARIOS[value];
+        if (scenario === undefined) {
+          die(`--preset must be one of: ${Object.keys(SCENARIOS).join(", ")}`);
+        }
+        options.scenario = scenario;
+        i++;
+        break;
+      }
       default:
         die(`unknown flag ${flag}`);
     }
@@ -39,7 +75,7 @@ function parseArgs(argv: string[]): Options {
 
 function die(message: string): never {
   console.error(`error: ${message}`);
-  console.error("usage: tsx src/main.ts [--seed N] [--months N] [--json] [--snapshot YYYY-MM]");
+  console.error("usage: tsx src/main.ts [--seed N] [--months N] [--growth N] [--churn N] [--json] [--snapshot YYYY-MM] [--preset NAME]");
   process.exit(1);
 }
 
@@ -60,7 +96,7 @@ function targetName(state: State, target: Target): string {
   if (target.kind === "customer") {
     return state.customers.find((c) => c.id === target.id)?.name ?? target.id;
   }
-  return INTERNAL_EFFORTS.find((e) => e.id === target.id)?.name ?? target.id;
+  return workNameOf(model, target);
 }
 
 // --- 3.2 Prose timeline ---
@@ -154,14 +190,37 @@ function printSnapshot(state: State, month: string): void {
     console.log(`  ${t.id.padEnd(4)} ${t.name.padEnd(18)} ${members.length ? members.join(", ") : "(no active members)"}`);
   }
 
-  // Ownership is derived here, not stored: a customer with no assignments is orphaned.
+  // Ownership is derived here, not stored. Slot counts distinguish the three
+  // states that matter: fully staffed, partially staffed, and orphaned.
   console.log(`\nCustomers (${state.customers.length})`);
   for (const c of state.customers) {
-    const owners = state.assignments.filter(
+    const needs = needsOf(model, { kind: "customer", id: c.id });
+    const rows = state.assignments.filter(
       (a) => a.target.kind === "customer" && a.target.id === c.id,
     );
-    const who = owners.map((a) => personName(state, a.personId)).join(", ");
-    console.log(`  ${c.id.padEnd(4)} ${c.name.padEnd(22)} ${owners.length ? who : "*** ORPHANED — no active assignments ***"}`);
+    const filled = needs.filter((n) => rows.some((a) => a.roleInContext === n));
+    const missing = needs.filter((n) => !filled.includes(n));
+
+    // One entry per person, listing every slot they hold on this account.
+    const bySlotHolder = new Map<string, string[]>();
+    for (const a of rows) {
+      const who = personName(state, a.personId);
+      const slots = bySlotHolder.get(who) ?? [];
+      if (a.roleInContext !== undefined) slots.push(a.roleInContext);
+      bySlotHolder.set(who, slots);
+    }
+    const owners = [...bySlotHolder.entries()]
+      .map(([who, slots]) => (slots.length > 0 ? `${who} (${slots.join(", ")})` : who))
+      .join(", ");
+
+    const ratio = `[${filled.length}/${needs.length}]`;
+    console.log(
+      `  ${c.id.padEnd(4)} ${c.name.padEnd(22)} ${ratio.padEnd(6)} ` +
+        `${rows.length > 0 ? owners : "*** ORPHANED — no active assignments ***"}`,
+    );
+    if (rows.length > 0 && missing.length > 0) {
+      console.log(`  ${"".padEnd(4)} ${"".padEnd(22)} ${"".padEnd(6)} UNSTAFFED: ${missing.join(", ")}`);
+    }
   }
 
   console.log(`\nAllocations (${state.assignments.length} rows)`);
@@ -180,7 +239,14 @@ function printSnapshot(state: State, month: string): void {
 // --- Entry point ---
 
 const options = parseArgs(process.argv.slice(2));
-const events = generate(options.seed, options.months);
+
+// Refuse to generate from a broken taxonomy: its output would be pathologies
+// indistinguishable from real ones. Silent when the model is sound.
+const scenario = scaleScenario(options.scenario, options.growth, options.churn);
+const configProblems = check({ model, scenario });
+if (configProblems.length > 0) die(`invalid configuration:\n  ${configProblems.join("\n  ")}`);
+
+const events = generate(options.seed, options.months, model, scenario);
 
 printTimeline(events);
 
