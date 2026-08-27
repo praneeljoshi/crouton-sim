@@ -9,7 +9,7 @@ npm install
 npx tsx src/main.ts --seed 42 --months 24
 ```
 
-## Scoping the ambiguity
+## Approach
 
 **Canonical events, not system payloads.** A Workday webhook and a Jira change
 are *projections* of the same underlying facts. The interesting layer is the one
@@ -46,7 +46,89 @@ and modelling.
 
 The rest of the extension — tunable regimes, presets, config validation — exposes
 key paramaters of the stochastic simulator to elicit different behaviors that let
-us explore this expanded space with more control. 
+us explore this expanded space with more control.
+
+---
+
+## The model
+
+**Events** — nine kinds, one discriminated union. `Base` is shared by all of them.
+
+```ts
+type Source = "hris" | "project_tool" | "manual";
+type EmploymentType = "full_time" | "part_time" | "contractor";
+type Target = { kind: "customer"; id: string } | { kind: "internal"; id: string };
+
+type Base = {
+  eventId: string;
+  timestamp: string;       // when we learned it
+  effectiveDate: string;   // when it becomes true of the org
+  source: Source;          // which system the fact would have come from
+};
+
+type Event = Base & (
+  | { kind: "CompanyFounded";    name: string; location: string; founder: string }
+  | { kind: "CompanyRelocated";  from: string; to: string }
+  | { kind: "PersonHired";       personId: string; name: string; role: string;
+                                 employmentType: EmploymentType; teamId?: string }
+  | { kind: "PersonDeparted";    personId: string; reason: "voluntary" | "involuntary" }
+  | { kind: "RoleChanged";       personId: string; from: string; to: string }
+  | { kind: "TeamFormed";        teamId: string; name: string }
+  | { kind: "PersonTransferred"; personId: string; fromTeamId: string | null; toTeamId: string }
+  | { kind: "CustomerSigned";    customerId: string; name: string }
+  | { kind: "AllocationChanged"; personId: string;
+                                 assignments: { target: Target; pct: number; roleInContext?: string }[] }
+);
+```
+
+`AllocationChanged` carries a person's **whole** assignment vector, not a diff, so
+every event is independently checkable against `sum <= 100` without replaying
+history, and the fold is a last-write-wins replacement. `from`/`to` pairs make
+the prose timeline self-describing without state lookups.
+
+**State** — derived by folding the log, never persisted.
+
+```ts
+type Company    = { name: string; location: string; foundedAt: string };
+type Person     = { id: string; name: string; role: string;
+                    employmentType: EmploymentType; hiredAt: string; departedAt?: string };
+type Team       = { id: string; name: string; formedAt: string };
+type Membership = { personId: string; teamId: string };     // person↔team is M:N
+type Customer   = { id: string; name: string; signedAt: string };
+type Assignment = { personId: string; target: Target;       // the junction table
+                    pct: number; roleInContext?: string };
+
+type State = {
+  company: Company | null;
+  people: Person[]; teams: Team[]; memberships: Membership[];
+  customers: Customer[]; assignments: Assignment[];
+};
+```
+
+Departure sets `departedAt` rather than deleting, so history stays replayable.
+There is no `owner` field anywhere — customer ownership is a query over
+`assignments`, which is why it cannot drift from the log.
+
+**Org model** *(extension)* — the taxonomy generation runs against.
+
+```ts
+type Slot = "account lead" | "FDE support" | "technical lead"
+          | "data integration" | "onboarding" | "design partner";
+
+type RoleSpec = { fills: Slot[]; promotesTo?: string; entry?: boolean };
+type WorkSpec = { id: string; name: string; needs: Slot[] };
+
+type OrgModel = {
+  roles: Record<string, RoleSpec>;   // single source: role list, ladder, eligibility
+  customers: WorkSpec[];
+  internal: WorkSpec[];
+};
+```
+
+`roles` is the only place a role is defined — the hireable subset, the promotion
+ladder, and slot eligibility are all derived from it, so parallel tables cannot
+fall out of sync.
+
 ---
 
 ## Core
